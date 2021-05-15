@@ -5,5 +5,15 @@ import Main from './Main'
 import NavigationMenu from './NavigationMenu'
 import Paragraph from './Paragraph'
 import Section from './Section'
+import Subheading from './Subheading'
 
-export { Heading, Input, Label, Main, NavigationMenu, Paragraph, Section }
+export {
+  Heading,
+  Input,
+  Label,
+  Main,
+  NavigationMenu,
+  Paragraph,
+  Section,
+  Subheading,
+}
