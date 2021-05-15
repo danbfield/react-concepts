@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import {
   Heading,
   Input,
@@ -14,6 +14,25 @@ export default function Accessibility() {
 
   const handleOnChange = (event) => setValue(event.target.value)
   const inputId = 'accessibilityExample'
+
+  const items = [
+    { id: 1, name: 'SONY 102HB12', description: 'Headphones' },
+    { id: 2, name: 'SONY 292LK90', description: 'Microphone' },
+  ]
+
+  const ItemFragment = (item) => (
+    <Fragment key={item.id}>
+      <dt>{item.name}</dt>
+      <dd>{item.description}</dd>
+    </Fragment>
+  )
+
+  const ItemDiv = (item) => (
+    <div key={item.id}>
+      <dt>{item.name}</dt>
+      <dd>{item.description}</dd>
+    </div>
+  )
 
   return (
     <Main>
@@ -38,6 +57,21 @@ export default function Accessibility() {
           type='text'
           value={value}
         />
+      </Section>
+      <Section>
+        <Subheading>HTML Semantics</Subheading>
+        <Paragraph>
+          Basically, use the correct HTML for your content. This is one of the
+          best ways of improving accessibility and it's super easy.
+        </Paragraph>
+        <Paragraph>
+          Use Fragments instead of divs, using divs will actually break our HTML
+          semantics and a benefit of this is that it doesn't add extra nodes to
+          the DOM. Inspect these two below in developer tools and compare the
+          elements.
+        </Paragraph>
+        <dl>{items.map((item) => ItemFragment(item))}</dl>
+        <dl>{items.map((item) => ItemDiv(item))}</dl>
       </Section>
     </Main>
   )
