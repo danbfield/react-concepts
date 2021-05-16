@@ -10,6 +10,16 @@ body {
   color: rgb(58, 58, 58);
 }
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+li {
+  margin: 0 15px;
+}
+
 a {
   text-decoration: none;
   color: rgb(79, 104, 146);
@@ -23,7 +33,8 @@ a:hover {
   box-sizing: border-box;
 }
 
-main {
+main,
+nav {
   margin: 1rem auto;
   max-width: 720px;
   padding: 0 2rem;
