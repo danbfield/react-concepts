@@ -60,7 +60,8 @@ h1 {
 }
 
 label,
-input {
+input,
+button {
   display: block;
   margin: 10px 0;
 }
