@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {
+  BuggedCounter,
   Button,
   Heading,
   Main,
@@ -8,6 +9,7 @@ import {
   Subheading,
 } from '../components'
 import { double } from '../helpers/Double'
+import Boundary from '../helpers/Boundary'
 
 export default function CodeSplitting() {
   const [regularValue, setRegularValue] = useState(1)
@@ -82,6 +84,51 @@ export default function CodeSplitting() {
           You can wrap a Switch within a Suspense and load these route
           components in a lazy manner.
         </Paragraph>
+        <Section>
+          <Subheading>Error Boundaries</Subheading>
+          <Paragraph>
+            If imports or modules fail, they will trigger an error. Error
+            boundaries can be implemented to improve the user experience and
+            manage recoveries.
+          </Paragraph>
+          <Paragraph>
+            Error boundaries exist so that, if part of your app crashes, it
+            doesn't bring the entire house down with it. These error boundaries
+            are React components which catch JavaScript errors anywhere in their
+            child component tree. They don't catch errors for things in event
+            handlers, async code, server side rendering, or errors actually in
+            the error boundary itself.
+          </Paragraph>
+          <Paragraph>
+            Unfortunately, these error boundaries must be class components to
+            use lifecycle methods such as componentDidCatch(). But the child
+            components can be functional. Below I have examples of class and
+            functional components throwing errors.
+          </Paragraph>
+          <Paragraph>
+            In then first example if either of these two buttons reach 5, both
+            will cease to work and an error is thrown to the boundary.
+          </Paragraph>
+          <Boundary>
+            <BuggedCounter />
+            <BuggedCounter />
+          </Boundary>
+          <Paragraph>
+            In the second example, each counter has its own boundary meaning
+            they will crash independently.
+          </Paragraph>
+          <Boundary>
+            <BuggedCounter />
+          </Boundary>
+          <Boundary>
+            <BuggedCounter />
+          </Boundary>
+          <Paragraph>
+            Error boundaries can be used with lazy loading components to display
+            error messages to the user if one were to fail to load. This could
+            be for reasons such as network errors.
+          </Paragraph>
+        </Section>
       </Section>
     </Main>
   )
