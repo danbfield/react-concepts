@@ -8,6 +8,7 @@ import {
   Section,
   Subheading,
 } from '../components'
+import Link from 'next/link'
 
 export default function Accessibility() {
   const [value, setValue] = useState('')
@@ -73,6 +74,19 @@ export default function Accessibility() {
         <dl>{items.map((item) => ItemFragment(item))}</dl>
         <dl>{items.map((item) => ItemDiv(item))}</dl>
       </Section>
+      <Section>
+        <Subheading>Accessible Rich Internet Applications (ARIA)</Subheading>
+        <Paragraph>
+          All aria-* attributes are supported in React and JSX. They don't use
+          camelCase though, they use kebab-case. There is a lot of documentation
+          on it, available on sites such as{' '}
+          <Link href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques'>
+            Mozilla
+          </Link>
+          .
+        </Paragraph>
+      </Section>
+      {/* Focus Control and Navigation */}
     </Main>
   )
 }
