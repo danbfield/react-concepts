@@ -87,6 +87,27 @@ export default function Accessibility() {
         </Paragraph>
       </Section>
       {/* Focus Control and Navigation */}
+      <Section>
+        <Subheading>Focus Control and Navigation</Subheading>
+        <Paragraph>
+          Applications should have the following to be accessible; it is obvious
+          that the thing the user is engaged in doing is focused (for example a
+          focused input field); the application is navigable using keyboard
+          only. This is typically covered well when using the correct semantic
+          HTML.
+        </Paragraph>
+        <Paragraph>
+          Landmarks, or sectioning elements, are used by technology assisted
+          users and they provide structure to apps (or well, documents). W3C
+          provides a great{' '}
+          <Link href='https://www.w3.org/TR/wai-aria-practices/examples/landmarks/HTML5.html'>
+            example
+          </Link>
+          . In this app here, each page has a main, and each content piece is
+          its own section with a subheading h2 tag. The most common sectioning
+          elements are main, section, footer, header, nav and aside.
+        </Paragraph>
+      </Section>
     </Main>
   )
 }
