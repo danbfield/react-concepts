@@ -1,3 +1,4 @@
+import BuggedCounter from './BuggedCounter'
 import Button from './Button'
 import Heading from './Heading'
 import Input from './Input'
@@ -9,6 +10,7 @@ import Section from './Section'
 import Subheading from './Subheading'
 
 export {
+  BuggedCounter,
   Button,
   Heading,
   Input,
