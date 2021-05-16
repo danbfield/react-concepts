@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default function Button({ changeHandler, children }) {
-  return <button onChange={changeHandler}>{children}</button>
+  return <button onClick={changeHandler}>{children}</button>
 }
 
 Button.propTypes = {
