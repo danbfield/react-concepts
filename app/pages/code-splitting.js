@@ -63,6 +63,26 @@ export default function CodeSplitting() {
           Double Dyanamic: {dynamicValue}
         </Button>
       </Section>
+      <Section>
+        <Subheading>Lazy Imports</Subheading>
+        <Paragraph>
+          React.lazy is a function which you can use to dynamically import a
+          regular component. This means it will automatically load the bundle
+          which contains the lazy component when it is required.
+        </Paragraph>
+        <Paragraph>{`const Component = React.lazy(() => import('./Component'))`}</Paragraph>
+        <Paragraph>
+          Lazy loaded components must be rendered inside of a Suspsense
+          component, which means we can show fallback content while it loads.
+          This would be a good place for loading spinners or things like that.
+          This fallback prop accepts any React element, or multiple of.
+        </Paragraph>
+        <Paragraph>
+          The perfect place to introduce lazy loading would be to the router.
+          You can wrap a Switch within a Suspense and load these route
+          components in a lazy manner.
+        </Paragraph>
+      </Section>
     </Main>
   )
 }
