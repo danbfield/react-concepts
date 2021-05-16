@@ -86,7 +86,6 @@ export default function Accessibility() {
           .
         </Paragraph>
       </Section>
-      {/* Focus Control and Navigation */}
       <Section>
         <Subheading>Focus Control and Navigation</Subheading>
         <Paragraph>
