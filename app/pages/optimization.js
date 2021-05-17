@@ -1,5 +1,6 @@
 import { Heading, Main, Paragraph, Section, Subheading } from '../components'
 import Link from 'next/link'
+
 export default function Optimization() {
   return (
     <Main>
