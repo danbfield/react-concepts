@@ -1,3 +1,44 @@
+import {
+  FocusedButton,
+  Heading,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
+
 export default function DomAndRefs() {
-  return <div>DOM and Refs</div>
+  return (
+    <Main>
+      <Heading>DOM and Refs</Heading>
+      <Section>
+        <Subheading>DOM and Refs</Subheading>
+        <Paragraph>
+          Not all user interfaces can be achieved using purely "React", to
+          re-render a child you would render it with new props, but sometimes
+          the thing you want to do is not possible using props or state. In this
+          case, we may need to use Refs, this provides a way to access DOM
+          nodes, or React elements created by the render method. The most common
+          use case for refs is managing focus of a button or input field. For
+          example, rendering a modal and focusing the first input field so the
+          transition for keyboard users is smooth. Refs can also be used for
+          text selection, media playback, triggering animations and integrating
+          with third-party DOM libraries which don't use React. In an ideal
+          world, we don't want to use refs.
+        </Paragraph>
+        <Paragraph>
+          Below we have a simple example of a button, which on first render
+          focuses. We can just hit our enter key and it will increase the count
+          rather than manually using our cursor.
+        </Paragraph>
+        <FocusedButton />
+        <Paragraph>
+          One common theme from what I've noticed is to try and figure out the
+          problem first with state, or props, then if all else fails use refs.
+          Basically only use refs when the behaviour isn't controllable in
+          React.
+        </Paragraph>
+      </Section>
+    </Main>
+  )
 }
