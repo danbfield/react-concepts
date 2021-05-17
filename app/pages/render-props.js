@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Heading, Main, Paragraph, Section, Subheading } from '../components'
 import Link from 'next/link'
 
