@@ -1,5 +1,6 @@
 import BuggedCounter from './BuggedCounter'
 import Button from './Button'
+import FocusedButton from './FocusedButton'
 import Heading from './Heading'
 import Input from './Input'
 import Label from './Label'
@@ -12,6 +13,7 @@ import Subheading from './Subheading'
 export {
   BuggedCounter,
   Button,
+  FocusedButton,
   Heading,
   Input,
   Label,
