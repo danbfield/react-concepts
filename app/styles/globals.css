@@ -10,14 +10,23 @@ body {
   color: rgb(58, 58, 58);
 }
 
+.mobile__hide-menu {
+  display: none;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(205, 224, 255);
 }
 
-li {
-  margin: 0 15px;
+li a {
+  display: inline-block;
+  padding: 12px;
 }
 
 a {
@@ -33,8 +42,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-main,
-nav {
+main {
   margin: 1rem auto;
   max-width: 720px;
   padding: 0 2rem;
@@ -56,6 +64,14 @@ h1 {
 @media screen and (max-width: 34em) {
   h1 {
     text-align: center;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile__hide-menu {
+    display: block;
   }
 }
 
