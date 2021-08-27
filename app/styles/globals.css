@@ -14,7 +14,7 @@ body {
   display: none;
 }
 
-ul {
+nav ul {
   display: flex;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
@@ -24,7 +24,7 @@ ul {
   background-color: rgb(205, 224, 255);
 }
 
-li a {
+nav li a {
   display: inline-block;
   padding: 12px;
 }
