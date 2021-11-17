@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import 'tailwindcss/tailwind.css'
 import { NavigationMenu as WithNavigation } from '../components'
 
 const items = [
