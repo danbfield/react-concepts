@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css'
-import { NavigationMenu as WithNavigation } from '../components'
+import { NavigationMenu } from '../components'
 
 const items = [
   { url: '/', text: 'Index' },
@@ -22,9 +22,12 @@ const items = [
 
 function MyApp({ Component, pageProps }) {
   return (
-    <WithNavigation items={items}>
-      <Component {...pageProps} />
-    </WithNavigation>
+    <div>
+      <NavigationMenu items={items} />
+      <div>
+        <Component {...pageProps} />
+      </div>
+    </div>
   )
 }
 
