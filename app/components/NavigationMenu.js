@@ -10,7 +10,7 @@ export default function NavigationMenu({ items }) {
   const menuText = menuIsHidden ? 'Show 🙉' : 'Hide 🙈'
 
   return (
-    <div className="bg-blue-800 text-blue-100 w-1/4">
+    <div className="bg-blue-800 text-blue-100 w-1/4 space-y-6">
       {/* Logo */}
       <a href="/" class="text-white flex items-center space-x-2">
         <Homeicon />
@@ -20,13 +20,17 @@ export default function NavigationMenu({ items }) {
       <nav>
         <ul>
           <li>
-            <a className="mobile__hide-menu" onClick={toggleMenu} href="#">
+            <a
+              className="mobile__hide-menu block py-2.5 px-4"
+              onClick={toggleMenu}
+              href="#"
+            >
               {menuText}
             </a>
           </li>
           {!menuIsHidden &&
             items.map((item, index) => (
-              <li key={index}>
+              <li key={index} className="block py-2.5 px-4">
                 <Link href={item.url}>{item.text}</Link>
               </li>
             ))}
