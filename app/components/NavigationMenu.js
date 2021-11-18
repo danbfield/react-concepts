@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-export default function NavigationMenu({ children, items }) {
+export default function NavigationMenu({ items }) {
   const [menuIsHidden, setMenuIsHidden] = useState(false)
 
   const toggleMenu = () => setMenuIsHidden(!menuIsHidden)
@@ -10,7 +10,9 @@ export default function NavigationMenu({ children, items }) {
   const menuText = menuIsHidden ? 'Show 🙉' : 'Hide 🙈'
 
   return (
-    <>
+    <div>
+      {/* Logo */}
+      {/* Navigation */}
       <nav>
         <ul>
           <li>
@@ -26,15 +28,10 @@ export default function NavigationMenu({ children, items }) {
             ))}
         </ul>
       </nav>
-      {children}
-    </>
+    </div>
   )
 }
 
 NavigationMenu.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
