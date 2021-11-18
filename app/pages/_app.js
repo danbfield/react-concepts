@@ -22,9 +22,9 @@ const items = [
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <div className="relative min-h-screen flex">
       <NavigationMenu items={items} />
-      <div>
+      <div className="flex-1p-10 text-xl">
         <Component {...pageProps} />
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function NavigationMenu({ items }) {
   const menuText = menuIsHidden ? 'Show 🙉' : 'Hide 🙈'
 
   return (
-    <div>
+    <div className="bg-blue-800 text-blue-100 w-1/4">
       {/* Logo */}
       {/* Navigation */}
       <nav>
