@@ -21,22 +21,29 @@ const mainMenuStyle = [
   'w-64',
 ]
 
-const mobileMenuStyle = []
+const mobileMenuStyle = [
+  'bg-blue-800',
+  'duration-200',
+  'ease-in-out',
+  'md:relative',
+  'md:translate-x-0',
+  'px-4',
+  'py-7',
+  'space-y-6',
+  'text-blue-100',
+  'transform',
+  'transition',
+  'w-screen',
+  'text-center',
+]
 
 export default function NavigationMenu({ items }) {
   const [menuClasses, setMenuClasses] = useState(mainMenuStyle)
   const [displayingMobileMenu, setDisplayingMobileMenu] = useState(false)
 
   const handleMobileButtonClick = () => {
-    const translateClass = '-translate-x-full'
-
-    const array = menuClasses.includes(translateClass)
-      ? menuClasses.filter((element) => element !== '-translate-x-full')
-      : [...menuClasses, translateClass]
-
-    setMenuClasses(array)
-    // setDisplayingMobileMenu(!displayingMobileMenu)
-    // setMenuClasses(displayingMobileMenu ? mainMenuStyle : mobileMenuStyle)
+    setDisplayingMobileMenu(!displayingMobileMenu)
+    setMenuClasses(displayingMobileMenu ? mainMenuStyle : mobileMenuStyle)
   }
 
   return (
@@ -53,9 +60,11 @@ export default function NavigationMenu({ items }) {
         </button>
       </div>
       <div className={menuClasses.join(' ')}>
-        <a href="/" className="px-4 text-white flex items-center space-x-2">
-          <span className="text-2xl font-bold">React Concepts</span>
-        </a>
+        {!displayingMobileMenu && (
+          <a href="/" className="px-4 text-white flex items-center space-x-2">
+            <span className="text-2xl font-bold">React Concepts</span>
+          </a>
+        )}
         <nav>
           <ul>
             {items.map((item, index) => (
