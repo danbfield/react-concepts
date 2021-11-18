@@ -20,7 +20,7 @@ export default function NavigationMenu({ items }) {
         <ul>
           <li>
             <a
-              className="mobile__hide-menu block py-2.5 px-4 rounded hover:bg-blue-700"
+              className="mobile__hide-menu block py-2.5 px-4 rounded hover:bg-blue-700 transition duration-200"
               onClick={toggleMenu}
               href="#"
             >
@@ -31,7 +31,7 @@ export default function NavigationMenu({ items }) {
             items.map((item, index) => (
               <li key={index}>
                 <a
-                  className="block py-2.5 px-4 rounded hover:bg-blue-700"
+                  className="block py-2.5 px-4 rounded hover:bg-blue-700 transition duration-200"
                   href={item.url}
                 >
                   {item.text}
