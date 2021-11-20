@@ -18,23 +18,22 @@ const mainMenuStyle = [
   'text-blue-100',
   'transform',
   'transition',
-  'w-64',
 ]
 
 const mobileMenuStyle = [
+  'absolute',
   'bg-blue-800',
   'duration-200',
   'ease-in-out',
-  'md:relative',
-  'md:translate-x-0',
+  'h-full',
+  'inset-y-0',
   'px-4',
   'py-7',
   'space-y-6',
   'text-blue-100',
-  'transform',
+  'text-center',
   'transition',
   'w-screen',
-  'text-center',
 ]
 
 export default function NavigationMenu({ items }) {
