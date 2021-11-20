@@ -3,37 +3,33 @@ import PropTypes from 'prop-types'
 import MenuIcon from './MenuIcon'
 
 const mainMenuStyle = [
-  '-translate-x-full',
+  '-translate-y-full',
   'absolute',
   'bg-blue-800',
-  'duration-200',
-  'ease-in-out',
   'inset-y-0',
   'left-0',
   'md:relative',
-  'md:translate-x-0',
+  'md:translate-y-0',
   'px-2',
   'py-7',
   'space-y-6',
   'text-blue-100',
   'transform',
-  'transition',
 ]
 
 const mobileMenuStyle = [
-  'absolute',
   'bg-blue-800',
-  'duration-200',
+  'duration-100',
   'ease-in-out',
   'h-full',
   'inset-y-0',
   'px-4',
-  'py-7',
+  'py-2',
+  'relative',
   'space-y-6',
   'text-blue-100',
   'text-center',
   'transition',
-  'w-screen',
 ]
 
 export default function NavigationMenu({ items }) {
@@ -47,12 +43,12 @@ export default function NavigationMenu({ items }) {
 
   return (
     <>
-      <div className="bg-gray-800 text-gray-100 flex justify-between md:hidden">
+      <div className="bg-blue-800 text-gray-100 flex justify-between md:hidden">
         <a href="/" className="block p-4 text-white font-bold">
           <span className="text-2xl font-bold">React Concepts</span>
         </a>
         <button
-          className="p-4 focus:outline-none focus:bg-gray-700"
+          className="p-4 focus:outline-none focus:bg-blue-700"
           onClick={handleMobileButtonClick}
         >
           <MenuIcon />
