@@ -11,6 +11,9 @@ module.exports = {
       full: '200%',
     },
     extend: {
+      translate: {
+        'full-xl': '200%',
+      },
       fontSize: {
         tiny: '1px',
       },
