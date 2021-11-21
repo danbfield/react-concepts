@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default function Section({ children }) {
-  return <section>{children}</section>
+  return <section className="mb-4">{children}</section>
 }
 
 Section.propTypes = {
