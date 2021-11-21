@@ -9,23 +9,21 @@ import {
   Subheading,
 } from '../components'
 
-function ParentA({ count, className, children }) {
+function ParentA({ count, children }) {
   return (
-    <>
-      <span className={className} style={{ display: 'block' }}>
-        Parent Component Count: {count}
-      </span>
+    <div className="mb-4">
+      <span className="block mb-4">Parent Component Count: {count}</span>
       {children}
-    </>
+    </div>
   )
 }
 
-function ParentB({ count, className, children }) {
+function ParentB({ count, children }) {
   return (
-    <>
-      <div className={className}>Parent Component Count: {count}</div>
+    <div className="mb-4">
+      <div className="mb-4">Parent Component Count: {count}</div>
       {children}
-    </>
+    </div>
   )
 }
 
@@ -33,11 +31,13 @@ function Child({ text }) {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <p>Child Component Count: {count}</p>
-      <p>{text}</p>
-      <button onClick={() => setCount(count + 1)}>Increase Child Count</button>
-    </>
+    <div className="mb-4">
+      <p className="mb-4">Child Component Count: {count}</p>
+      <p className="mb-4">{text}</p>
+      <Button changeHandler={() => setCount(count + 1)}>
+        Increase Child Count
+      </Button>
+    </div>
   )
 }
 
@@ -145,10 +145,10 @@ export default function Reconciliation() {
         </Paragraph>
         {/* Example */}
         <Button changeHandler={handleExampleC}>Add to bottom of list</Button>
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          {visibleC && <li>Three</li>}
+        <ul className="pt-4">
+          <li className="mb-2">One</li>
+          <li className="mb-2">Two</li>
+          {visibleC && <li className="mb-2">Three</li>}
         </ul>
         <Paragraph>
           The problem is though, in React, if you add to the front, or the
@@ -160,11 +160,11 @@ export default function Reconciliation() {
           which nodes need updating and which don't from the original tree.
           React knows which element is the new addiction if this were the case.
         </Paragraph>
-        <button onClick={handleExampleD}>Add to middle of list</button>
-        <ul>
-          <li>One</li>
-          {visibleD && <li>Three</li>}
-          <li>Two</li>
+        <Button changeHandler={handleExampleD}>Add to middle of list</Button>
+        <ul className="pt-4">
+          <li className="mb-2">One</li>
+          {visibleD && <li className="mb-2">Three</li>}
+          <li className="mb-2">Two</li>
         </ul>
       </Section>
     </Main>

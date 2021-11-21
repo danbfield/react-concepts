@@ -38,7 +38,7 @@ export default function RenderProps() {
           render={(data) => <Paragraph>{data && data.text}</Paragraph>}
         />
         <RenderAnything
-          render={(data) => <Subheading>{data && data.text}</Subheading>}
+          render={(data) => <Paragraph>{data && data.text}</Paragraph>}
         />
       </Section>
     </Main>

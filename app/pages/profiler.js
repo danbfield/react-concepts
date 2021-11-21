@@ -55,10 +55,12 @@ export default function Profiler() {
           callback.
         </Paragraph>
         <Button changeHandler={() => setCount(count + 1)}>Re-render</Button>
-        <ReactProfiler id='list' onRender={callback}>
-          <ul>
+        <ReactProfiler id="list" onRender={callback}>
+          <ul className="pt-4">
             {items.map((item, index) => (
-              <li key={index}>{item.name}</li>
+              <li key={index} className="mb-2">
+                {item.name}
+              </li>
             ))}
           </ul>
         </ReactProfiler>
