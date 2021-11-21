@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import MenuIcon from './MenuIcon'
 
 const mainMenuStyle = [
-  '-translate-y-full',
+  '-translate-x-full',
   'absolute',
   'bg-blue-800',
   'inset-y-0',
   'left-0',
   'md:relative',
-  'md:translate-y-0',
+  'md:translate-x-0',
   'px-2',
   'py-7',
   'space-y-6',
