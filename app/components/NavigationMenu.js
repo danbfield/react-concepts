@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import PropTypes from 'prop-types'
+import Link from 'next/link'
 import MenuIcon from './MenuIcon'
+import PropTypes from 'prop-types'
 
 const mainMenuStyle = [
   '-translate-x-full',
@@ -44,9 +45,12 @@ export default function NavigationMenu({ items }) {
   return (
     <>
       <div className="bg-blue-800 text-gray-100 flex justify-between md:hidden">
-        <a href="/" className="block p-4 text-white font-bold">
-          <span className="text-2xl font-bold">React Concepts</span>
-        </a>
+        <Link href="/">
+          <a className="block p-4 text-white font-bold">
+            <span className="text-2xl font-bold">React Concepts</span>
+          </a>
+        </Link>
+
         <button
           className="p-4 focus:outline-none focus:bg-blue-700"
           onClick={handleMobileButtonClick}
@@ -56,20 +60,21 @@ export default function NavigationMenu({ items }) {
       </div>
       <div className={menuClasses.join(' ')}>
         {!displayingMobileMenu && (
-          <a href="/" className="px-4 text-white flex items-center space-x-2">
-            <span className="text-2xl font-bold">React Concepts</span>
-          </a>
+          <Link href="/">
+            <a className="px-4 text-white flex items-center space-x-2">
+              <span className="text-2xl font-bold">React Concepts</span>
+            </a>
+          </Link>
         )}
         <nav>
           <ul>
             {items.map((item, index) => (
               <li key={index}>
-                <a
-                  className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
-                  href={item.url}
-                >
-                  {item.text}
-                </a>
+                <Link href={item.url}>
+                  <a className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+                    {item.text}
+                  </a>
+                </Link>
               </li>
             ))}
           </ul>
