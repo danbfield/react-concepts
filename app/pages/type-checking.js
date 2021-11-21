@@ -1,5 +1,11 @@
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
-import Link from 'next/link'
+import {
+  Heading,
+  Link,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
 
 export default function TypeChecking() {
   return (
@@ -11,7 +17,7 @@ export default function TypeChecking() {
           Typechecking is a pretty common tool for catching a lot of bugs in an
           application; the popular JavaScript superset TypeScript can typecheck
           entire applications. In pure JavaScript, we can use{' '}
-          <Link href='https://github.com/facebook/prop-types'>PropTypes</Link>{' '}
+          <Link href="https://github.com/facebook/prop-types">PropTypes</Link>{' '}
           to do this.
         </Paragraph>
       </Section>

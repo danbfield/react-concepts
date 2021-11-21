@@ -1,5 +1,11 @@
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
-import Link from 'next/link'
+import {
+  Heading,
+  Link,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
 
 export default function Optimization() {
   return (
@@ -23,7 +29,7 @@ export default function Optimization() {
           whether the DOM needs updating. Re-rendering can sometimes be rather
           complex and therefore slow, but there is some lifecycle methods which
           can improve this such as{' '}
-          <Link href='https://reactjs.org/docs/optimizing-performance.html#avoid-reconciliation'>
+          <Link href="https://reactjs.org/docs/optimizing-performance.html#avoid-reconciliation">
             shouldComponentUpdate
           </Link>
           . Lifecycle methods can't be used with functional components though,
@@ -34,7 +40,7 @@ export default function Optimization() {
           lifecycle methods. Thus, we cannot actually optimize them using
           shouldComponentUpdate. Functional components are much simpler and cost
           less bytes than class components. You can use{' '}
-          <Link href='https://reactjs.org/docs/react-api.html#reactmemo'>
+          <Link href="https://reactjs.org/docs/react-api.html#reactmemo">
             React.memo
           </Link>{' '}
           which is a higher-order component that skips re-rendering of the

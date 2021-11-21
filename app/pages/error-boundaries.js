@@ -1,5 +1,11 @@
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
-import Link from 'next/link'
+import {
+  Heading,
+  Link,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
 
 export default function ErrorBoundaries() {
   return (
@@ -9,7 +15,7 @@ export default function ErrorBoundaries() {
         <Subheading>Error Boundaries</Subheading>
         <Paragraph>
           I've already covered error boundaries as part of the{' '}
-          <Link href='/code-splitting'>code-splitting</Link> section which shows
+          <Link href="/code-splitting">code splitting</Link> section which shows
           a neat example. But in summary, these are a React way of catching
           errors anywhere in a component tree, logging these and displaying
           fallback interfaces. These errors can be caught during render, in

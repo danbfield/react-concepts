@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default function Heading({ children }) {
-  return <h1>{children}</h1>
+  return <h1 className="mb-4 text-2xl text-blue-700">{children}</h1>
 }
 
 Heading.propTypes = {

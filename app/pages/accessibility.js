@@ -3,12 +3,12 @@ import {
   Heading,
   Input,
   Label,
+  Link,
   Main,
   Paragraph,
   Section,
   Subheading,
 } from '../components'
-import Link from 'next/link'
 
 export default function Accessibility() {
   const [value, setValue] = useState('')
@@ -55,7 +55,7 @@ export default function Accessibility() {
         <Input
           id={inputId}
           onChange={handleOnChange}
-          type='text'
+          type="text"
           value={value}
         />
       </Section>
@@ -80,7 +80,7 @@ export default function Accessibility() {
           All aria-* attributes are supported in React and JSX. They don't use
           camelCase though, they use kebab-case. There is a lot of documentation
           on it, available on sites such as{' '}
-          <Link href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques'>
+          <Link href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">
             Mozilla
           </Link>
           .
@@ -99,7 +99,7 @@ export default function Accessibility() {
           Landmarks, or sectioning elements, are used by technology assisted
           users and they provide structure to apps (or well, documents). W3C
           provides a great{' '}
-          <Link href='https://www.w3.org/TR/wai-aria-practices/examples/landmarks/HTML5.html'>
+          <Link href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/HTML5.html">
             example
           </Link>
           . In this app here, each page has a main, and each content piece is
