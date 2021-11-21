@@ -3,6 +3,7 @@ import Button from './Button'
 import FocusedButton from './FocusedButton'
 import Heading from './Heading'
 import Input from './Input'
+import InteractableLink from './InteractableLink'
 import Label from './Label'
 import Main from './Main'
 import NavigationMenu from './NavigationMenu'
@@ -16,6 +17,7 @@ export {
   FocusedButton,
   Heading,
   Input,
+  InteractableLink,
   Label,
   Main,
   NavigationMenu,
