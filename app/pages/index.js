@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import { Heading, Main, Paragraph } from '../components'
+import { InteractableLink, Paragraph, Main, Heading } from '../components'
 
 export default function Home() {
   return (
@@ -11,8 +10,10 @@ export default function Home() {
       </Paragraph>
       <Paragraph>
         An app made by{' '}
-        <Link href='https://github.com/danielbutterfield'>Dan</Link> with
-        NextJS.
+        <InteractableLink href="https://github.com/danielbutterfield">
+          Dan
+        </InteractableLink>{' '}
+        with NextJS.
       </Paragraph>
     </Main>
   )
