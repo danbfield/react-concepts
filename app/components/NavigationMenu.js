@@ -50,7 +50,6 @@ export default function NavigationMenu({ items }) {
             <span className="text-2xl font-bold">React Concepts</span>
           </a>
         </Link>
-
         <button
           className="p-4 focus:outline-none focus:bg-blue-700"
           onClick={handleMobileButtonClick}
