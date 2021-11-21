@@ -1,15 +1,15 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import PropTypes from 'prop-types'
 
-export default function InteractableLink({ children, href }) {
+export default function Link({ children, href }) {
   return (
-    <Link href={href}>
+    <NextLink href={href}>
       <a className="text-blue-600 hover:underline">{children}</a>
-    </Link>
+    </NextLink>
   )
 }
 
-InteractableLink.propTypes = {
+Link.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
