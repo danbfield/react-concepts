@@ -45,7 +45,6 @@ export default function NavigationMenu({ items }) {
     <>
       <div className="bg-blue-800 text-gray-100 flex justify-between md:hidden">
         <a href="/" className="block p-4 text-white font-bold">
-          <span className="text-tiny">Not Tiny...?</span>
           <span className="text-2xl font-bold">React Concepts</span>
         </a>
         <button
