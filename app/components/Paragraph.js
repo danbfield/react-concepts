@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default function Paragraph({ children }) {
-  return <p>{children}</p>
+  return <p className="my-4">{children}</p>
 }
 
 Paragraph.propTypes = {
