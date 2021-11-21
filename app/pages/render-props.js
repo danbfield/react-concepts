@@ -1,6 +1,12 @@
 import { useState } from 'react'
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
-import Link from 'next/link'
+import {
+  Heading,
+  Link,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
 
 function RenderAnything({ render }) {
   const [data, setData] = useState({
@@ -25,7 +31,7 @@ export default function RenderProps() {
           There's other neat tricks too, such as using this method to create
           HOCs, or instead of using "render", use "children" which means it
           doesn't need to be specified as a prop in the component. See{' '}
-          <Link href='https://reactjs.org/docs/render-props.html'>here</Link>{' '}
+          <Link href="https://reactjs.org/docs/render-props.html">here</Link>{' '}
           for more examples.
         </Paragraph>
         <RenderAnything

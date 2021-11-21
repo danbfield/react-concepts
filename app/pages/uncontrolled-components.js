@@ -13,9 +13,9 @@ function Form() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor='inputA'>What is your favourite colour?</label>
-        <input id='inputA' type='text' ref={ref} />
-        <input type='submit' value='Submit' />
+        <label htmlFor="inputA">What is your favourite colour?</label>
+        <input id="inputA" type="text" ref={ref} />
+        <input type="submit" value="Submit" />
       </form>
       {color && <Paragraph>Your favourite colour is: {color}</Paragraph>}
     </>

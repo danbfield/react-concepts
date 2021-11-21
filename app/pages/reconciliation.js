@@ -2,12 +2,12 @@ import { useState } from 'react'
 import {
   Button,
   Heading,
+  Link,
   Main,
   Paragraph,
   Section,
   Subheading,
 } from '../components'
-import Link from 'next/link'
 
 function ParentA({ count, className, children }) {
   return (
@@ -75,7 +75,7 @@ export default function Reconciliation() {
         </Paragraph>
         <Paragraph>
           React's algorithm for working out the tree diffs is{' '}
-          <Link href='https://stackoverflow.com/a/1909388'>O(n)</Link>, and it
+          <Link href="https://stackoverflow.com/a/1909388">O(n)</Link>, and it
           assumes only two things; Elements created of different types will
           produce a new tree; Developers can "hint" at which elements are stable
           across renders using the "key" property on things like lists.
@@ -98,11 +98,11 @@ export default function Reconciliation() {
           down the childs state.
         </Paragraph>
         {!toggleA ? (
-          <ParentA count={countA} className='exampleA'>
+          <ParentA count={countA} className="exampleA">
             <Child />
           </ParentA>
         ) : (
-          <ParentB count={countA} className='exampleB'>
+          <ParentB count={countA} className="exampleB">
             <Child />
           </ParentB>
         )}
@@ -123,11 +123,11 @@ export default function Reconciliation() {
           is the root. The state is unaffected.
         </Paragraph>
         {!toggleB ? (
-          <ParentA count={countB} className='parentA'>
+          <ParentA count={countB} className="parentA">
             <Child />
           </ParentA>
         ) : (
-          <ParentA count={countB} className='parentB'>
+          <ParentA count={countB} className="parentB">
             <Child />
           </ParentA>
         )}
