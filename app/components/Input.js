@@ -10,9 +10,14 @@ export default function Input({
   value,
 }) {
   return (
-    <div>
-      {label && <label htmlFor={htmlFor}>{label}</label>}
+    <div className="mb-4">
+      {label && (
+        <label className="block text-gray-700 font-bold mb-2" htmlFor={htmlFor}>
+          {label}
+        </label>
+      )}
       <input
+        className="shadow appearance-none border rounded py-2 px-3 text-gray-700 hover:border-blue-300 focus:outline-none focus:border-blue-500 focus:shadow-outline"
         id={id}
         onChange={onChange}
         required={required}
