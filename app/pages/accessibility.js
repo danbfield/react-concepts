@@ -2,7 +2,6 @@ import { useState, Fragment } from 'react'
 import {
   Heading,
   Input,
-  Label,
   Link,
   Main,
   Paragraph,
@@ -51,9 +50,10 @@ export default function Accessibility() {
           example I created a const which has been used that for both the
           htmlFor attribute and the input id prop.
         </Paragraph>
-        <Label htmlFor={inputId}>Example Label for Input</Label>
         <Input
+          htmlFor={inputId}
           id={inputId}
+          label="Example Label for Input"
           onChange={handleOnChange}
           type="text"
           value={value}
