@@ -24,7 +24,7 @@ function Form() {
           What is your favourite colour?
         </label>
         <input
-          className="shadow appearance-none border rounded py-2 px-3 text-gray-700 hover:border-blue-300 focus:outline-none focus:border-blue-500 focus:shadow-outline"
+          className="block shadow appearance-none border rounded py-2 px-3 mb-4 text-gray-700 hover:border-blue-300 focus:outline-none focus:border-blue-500 focus:shadow-outline"
           id="inputA"
           type="text"
           ref={ref}
