@@ -1,5 +1,12 @@
 import { useState, useRef } from 'react'
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
+import {
+  Button,
+  Heading,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
 
 function Form() {
   const ref = useRef(null)
@@ -12,10 +19,17 @@ function Form() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="inputA">What is your favourite colour?</label>
-        <input id="inputA" type="text" ref={ref} />
-        <input type="submit" value="Submit" />
+      <form onSubmit={handleSubmit} className="my-4">
+        <label className="block text-gray-700 font-bold mb-2" htmlFor="inputA">
+          What is your favourite colour?
+        </label>
+        <input
+          className="shadow appearance-none border rounded py-2 px-3 text-gray-700 hover:border-blue-300 focus:outline-none focus:border-blue-500 focus:shadow-outline"
+          id="inputA"
+          type="text"
+          ref={ref}
+        />
+        <Button>Submit</Button>
       </form>
       {color && <Paragraph>Your favourite colour is: {color}</Paragraph>}
     </>
