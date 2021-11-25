@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="min-h-screen md:flex">
       <NavigationMenu items={items} />
-      <div className="flex-1 p-10 text-xl">
+      <div className="flex-1 p-10 text-xl md:mr-20">
         <Component {...pageProps} />
       </div>
     </div>
