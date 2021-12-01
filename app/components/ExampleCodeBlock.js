@@ -1,16 +1,16 @@
-import { CodeBlock, vs2015 } from 'react-code-blocks'
+import { CodeBlock, monoBlue } from 'react-code-blocks'
 
 const language = 'javascript'
-const showLineNumbers = true
+const showLineNumbers = false
 
 export default function ExampleCodeBlock({ code }) {
   return (
-    <span className="my-4">
+    <span className="block my-4">
       <CodeBlock
         text={code}
         language={language}
         showLineNumbers={showLineNumbers}
-        theme={vs2015}
+        theme={monoBlue}
       />
     </span>
   )
