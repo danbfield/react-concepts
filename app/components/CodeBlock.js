@@ -1,26 +1,26 @@
 import PropTypes from 'prop-types'
-import { CodeBlock, monoBlue } from 'react-code-blocks'
+import { CodeBlock as ReactCodeBlock, monoBlue } from 'react-code-blocks'
 
-export default function ExampleCodeBlock({ code, language, showLineNumbers }) {
+export default function CodeBlock({ code, language, showLineNumbers }) {
   return (
     <span className="block my-4">
-      <CodeBlock
-        text={code}
+      <ReactCodeBlock
         language={language}
         showLineNumbers={showLineNumbers}
+        text={code}
         theme={monoBlue}
       />
     </span>
   )
 }
 
-ExampleCodeBlock.propTypes = {
+CodeBlock.propTypes = {
   code: PropTypes.string.isRequired,
   language: PropTypes.string,
   showLineNumbers: PropTypes.bool,
 }
 
-ExampleCodeBlock.defaultProps = {
+CodeBlock.defaultProps = {
   language: 'javascript',
   showLineNumbers: false,
 }

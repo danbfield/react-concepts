@@ -1,6 +1,6 @@
 import { useState, Fragment } from 'react'
 import {
-  ExampleCodeBlock,
+  CodeBlock,
   Heading,
   Input,
   Link,
@@ -74,9 +74,9 @@ export default function Accessibility() {
           elements.
         </Paragraph>
         <dl>{items.map((item) => ItemFragment(item))}</dl>
-        <ExampleCodeBlock code={ExampleFragment} />
+        <CodeBlock code={ExampleFragment} />
         <dl>{items.map((item) => ItemDiv(item))}</dl>
-        <ExampleCodeBlock code={ExampleDiv} />
+        <CodeBlock code={ExampleDiv} />
       </Section>
       <Section>
         <Subheading>Accessible Rich Internet Applications (ARIA)</Subheading>
