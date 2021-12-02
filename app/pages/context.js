@@ -1,6 +1,15 @@
 import { useContext, useState } from 'react'
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
+import {
+  CodeBlock,
+  CodeSnippit,
+  Heading,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
 import UserContext from '../helpers/UserContext'
+import { ExampleContext } from '../code'
 
 function ComponentWithContext() {
   const user = useContext(UserContext)
@@ -30,10 +39,14 @@ export default function Context() {
         </Paragraph>
         <Paragraph>
           We can create a user object and pass that value into Context. Other
-          components can get this user object easily by doing the following:
+          components can get this user object easily by doing the following hook
+          with a User example:
         </Paragraph>
-        <Paragraph>{`const user = useContext(UserContext)`}</Paragraph>
-        <Paragraph>{`return <Paragraph>Hello, {user.name}</Paragraph>`}</Paragraph>
+        <CodeSnippit code={`const user = useContext(UserContext)`} />
+        <Paragraph>
+          To use something like this, we could do the following:
+        </Paragraph>
+        <CodeBlock code={ExampleContext} />
         <UserContext.Provider value={user}>
           <ComponentWithContext />
         </UserContext.Provider>

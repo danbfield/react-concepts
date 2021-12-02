@@ -1,26 +1,34 @@
 import PropTypes from 'prop-types'
-import { CodeBlock, monoBlue } from 'react-code-blocks'
+import { Code, monoBlue } from 'react-code-blocks'
 
-export default function ExampleCodeBlock({ code, language, showLineNumbers }) {
+export default function CodeSnippit({
+  code,
+  language,
+  showLineNumbers,
+  wrapLongLines,
+}) {
   return (
     <span className="block my-4">
-      <CodeBlock
-        text={code}
+      <Code
         language={language}
         showLineNumbers={showLineNumbers}
+        text={code}
         theme={monoBlue}
+        wrapLongLine={wrapLongLines}
       />
     </span>
   )
 }
 
-ExampleCodeBlock.propTypes = {
+CodeSnippit.propTypes = {
   code: PropTypes.string.isRequired,
   language: PropTypes.string,
   showLineNumbers: PropTypes.bool,
+  wrapLongLines: PropTypes.bool,
 }
 
-ExampleCodeBlock.defaultProps = {
+CodeSnippit.defaultProps = {
   language: 'javascript',
   showLineNumbers: false,
+  wrapLongLines: true,
 }
