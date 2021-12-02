@@ -1,5 +1,6 @@
 import BuggedCounter from './BuggedCounter'
 import Button from './Button'
+import CodeSnippit from './CodeSnippit'
 import ExampleCodeBlock from './ExampleCodeBlock'
 import FocusedButton from './FocusedButton'
 import Heading from './Heading'
@@ -14,6 +15,7 @@ import Subheading from './Subheading'
 export {
   BuggedCounter,
   Button,
+  CodeSnippit,
   ExampleCodeBlock,
   FocusedButton,
   Heading,
