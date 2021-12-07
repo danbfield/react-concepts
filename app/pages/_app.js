@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css'
 import { NavigationMenu } from '../components'
+import { AnimatePresence } from 'framer-motion'
 
 const items = [
   { url: '/', text: 'Index' },
@@ -24,9 +25,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="min-h-screen md:flex">
       <NavigationMenu items={items} />
-      <div className="flex-1 p-10 text-xl md:mr-20">
-        <Component {...pageProps} />
-      </div>
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <div className="flex-1 p-10 text-xl md:mr-20">
+          <Component {...pageProps} />
+        </div>
+      </AnimatePresence>
     </div>
   )
 }
