@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import MenuIcon from './MenuIcon'
 
-const mainMenuStyle = [
+const closedMobileMenu = [
   '-translate-x-full',
   'absolute',
   'bg-blue-800',
@@ -18,7 +18,7 @@ const mainMenuStyle = [
   'transform',
 ]
 
-const mobileMenuStyle = [
+const openMobileMenu = [
   'bg-blue-800',
   'duration-100',
   'ease-in-out',
@@ -34,12 +34,12 @@ const mobileMenuStyle = [
 ]
 
 export default function MenuMobile({ items }) {
-  const [menuClasses, setMenuClasses] = useState(mainMenuStyle)
-  const [displayingMobileMenu, setDisplayingMobileMenu] = useState(true)
+  const [menuClasses, setMenuClasses] = useState(closedMobileMenu)
+  const [displayingMobileMenu, setDisplayingMobileMenu] = useState(false)
 
   const handleMobileButtonClick = () => {
     setDisplayingMobileMenu(!displayingMobileMenu)
-    setMenuClasses(displayingMobileMenu ? mainMenuStyle : mobileMenuStyle)
+    setMenuClasses(displayingMobileMenu ? openMobileMenu : closedMobileMenu)
   }
 
   return (
