@@ -7,6 +7,10 @@ export default function NavigationMenu({ items }) {
   const [belowMediumBreakpoint, setBelowMediumBreakpoint] = useState(false)
 
   useEffect(() => {
+    if (window) {
+      setBelowMediumBreakpoint(window.innerWidth < 768)
+    }
+
     window.addEventListener('resize', () => {
       setBelowMediumBreakpoint(window.innerWidth < 768)
     })
