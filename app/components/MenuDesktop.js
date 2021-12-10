@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
+import { convertArrayIntoString } from '../helpers/ArrayHelpers'
 
 const mainMenuStyle = [
   '-translate-x-full',
@@ -17,8 +18,10 @@ const mainMenuStyle = [
 ]
 
 export default function MenuDesktop({ items }) {
+  const currentClasses = convertArrayIntoString(mainMenuStyle)
+
   return (
-    <div className={mainMenuStyle.join(' ')}>
+    <div className={currentClasses}>
       <Link href="/">
         <a className="px-4 text-white flex items-center space-x-2">
           <span className="text-2xl font-bold">React Concepts</span>

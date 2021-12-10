@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import MenuIcon from './MenuIcon'
+import { convertArrayIntoString } from '../helpers/ArrayHelpers'
 
 const closedMobileMenu = [
   '-translate-x-full',
@@ -42,9 +43,7 @@ export default function MenuMobile({ items }) {
     setMenuClasses(displayingMobileMenu ? openMobileMenu : closedMobileMenu)
   }
 
-  const currentClasses = menuClasses.reduce(
-    (previousValue, currentValue) => `${previousValue} ${currentValue}`
-  )
+  const currentClasses = convertArrayIntoString(menuClasses)
 
   return (
     <>
