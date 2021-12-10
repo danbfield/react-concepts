@@ -42,6 +42,10 @@ export default function MenuMobile({ items }) {
     setMenuClasses(displayingMobileMenu ? openMobileMenu : closedMobileMenu)
   }
 
+  const currentClasses = menuClasses.reduce(
+    (previousValue, currentValue) => `${previousValue} ${currentValue}`
+  )
+
   return (
     <>
       <div className="bg-blue-800 text-gray-100 flex justify-between md:hidden">
@@ -57,7 +61,7 @@ export default function MenuMobile({ items }) {
           <MenuIcon />
         </button>
       </div>
-      <div className={menuClasses.join(' ')}>
+      <div className={currentClasses}>
         <nav>
           <ul>
             {items.map((item, index) => (
