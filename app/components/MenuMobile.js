@@ -34,7 +34,7 @@ const mobileMenuStyle = [
 ]
 
 export default function MenuMobile({ items }) {
-  const [menuClasses, setMenuClasses] = useState(mobileMenuStyle)
+  const [menuClasses, setMenuClasses] = useState(mainMenuStyle)
   const [displayingMobileMenu, setDisplayingMobileMenu] = useState(true)
 
   const handleMobileButtonClick = () => {
