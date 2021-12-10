@@ -81,3 +81,7 @@ export default function MenuMobile({ items }) {
     </>
   )
 }
+
+MenuMobile.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+}

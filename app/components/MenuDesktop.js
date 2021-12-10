@@ -43,3 +43,7 @@ export default function MenuDesktop({ items }) {
     </div>
   )
 }
+
+MenuDesktop.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
