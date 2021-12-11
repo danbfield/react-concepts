@@ -1,4 +1,6 @@
 import {
+  CodeBlock,
+  CodeSnippit,
   FocusedButton,
   Heading,
   Main,
@@ -6,6 +8,7 @@ import {
   Section,
   Subheading,
 } from '../components'
+import { ExampleRef } from '../code'
 
 export default function DomAndRefs() {
   return (
@@ -32,6 +35,7 @@ export default function DomAndRefs() {
           rather than manually using our cursor.
         </Paragraph>
         <FocusedButton />
+        <CodeBlock code={ExampleRef} />
         <Paragraph>
           One common theme from what I've noticed is to try and figure out the
           problem first with state, or props, then if all else fails use refs.
@@ -49,9 +53,7 @@ export default function DomAndRefs() {
           lifting state I suppose, you can have a parent with a ref, and pass it
           to this child component, which uses forwardRef().
         </Paragraph>
-        <Paragraph>
-          {`React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>)`}
-        </Paragraph>
+        <CodeSnippit code={`React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>)`} />
       </Section>
     </Main>
   )
