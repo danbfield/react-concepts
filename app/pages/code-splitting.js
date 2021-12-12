@@ -11,7 +11,7 @@ import {
   Subheading,
 } from '../components'
 import { double } from '../helpers/Double'
-import { ExampleImports } from '../code'
+import { ExampleBoundary, ExampleImports } from '../code'
 import Boundary from '../helpers/Boundary'
 
 export default function CodeSplitting() {
@@ -76,7 +76,9 @@ export default function CodeSplitting() {
           regular component. This means it will automatically load the bundle
           which contains the lazy component when it is required.
         </Paragraph>
-        <Paragraph>{`const Component = React.lazy(() => import('./Component'))`}</Paragraph>
+        <CodeSnippit
+          code={`const Component = React.lazy(() => import('./Component'))`}
+        />
         <Paragraph>
           Lazy loaded components must be rendered inside of a Suspsense
           component, which means we can show fallback content while it loads.
@@ -105,9 +107,10 @@ export default function CodeSplitting() {
           </Paragraph>
           <Paragraph>
             Unfortunately, these error boundaries must be class components to
-            use lifecycle methods such as componentDidCatch(). But the child
-            components can be functional. Below I have examples of class and
-            functional components throwing errors.
+            use lifecycle methods such as{' '}
+            <CodeSnippit code="componentDidCatch()" displayInline />. But the
+            child components can be functional. Below I have examples of class
+            and functional components throwing errors.
           </Paragraph>
           <Paragraph>
             In then first example if either of these two buttons reach 5, both
@@ -127,6 +130,7 @@ export default function CodeSplitting() {
           <Boundary>
             <BuggedCounter />
           </Boundary>
+          <CodeBlock code={ExampleBoundary} />
           <Paragraph>
             Error boundaries can be used with lazy loading components to display
             error messages to the user if one were to fail to load. This could
