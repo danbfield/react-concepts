@@ -67,7 +67,7 @@ export default function MenuMobile({ items }) {
               <li key={index}>
                 <Link href={item.url}>
                   <a
-                    className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white" 
+                    className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
                     onClick={handleMobileButtonClick}
                   >
                     {item.text}

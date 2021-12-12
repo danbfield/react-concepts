@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {
   Button,
+  CodeSnippit,
   Heading,
   Link,
   Main,
@@ -89,13 +90,15 @@ export default function Reconciliation() {
       <Section>
         <Subheading>Elements of different types</Subheading>
         <Paragraph>
-          If the elements are different, for example rendering an img to div,
-          React will tear down the tree and build up the new one from nothing.
-          While React tears down a root, it also destroys the children too;
-          including their state. For example the only difference below for the
-          parent count display is, one is rendered with a div, and the other
-          span; two seperate components of course, clicking the toggle will tear
-          down the childs state.
+          If the elements are different, for example rendering an{' '}
+          <CodeSnippit code="img" displayInline /> to{' '}
+          <CodeSnippit code="div" displayInline />, React will tear down the
+          tree and build up the new one from nothing. While React tears down a
+          root, it also destroys the children too; including their{' '}
+          <CodeSnippit code="state" displayInline />. For example the only
+          difference below for the parent count display is, one is rendered with
+          a div, and the other span; two seperate components of course, clicking
+          the toggle will tear down the childs state.
         </Paragraph>
         {!toggleA ? (
           <ParentA count={countA} className="exampleA">
@@ -115,12 +118,15 @@ export default function Reconciliation() {
         <Subheading>Elements of the same type</Subheading>
         <Paragraph>
           If the elements are the same, when React compares them, React will
-          adjust the attributes and keep the same DOM node. For example changing
-          className or required on an input field; the node itself will remain
-          with its state. For example below, the only thing which changes when
-          we toggle between these components is the className, which means the
-          DOM nodes themselves aren't affected and children aren't torn down nor
-          is the root. The state is unaffected.
+          adjust the attributes and keep the same DOM node. For example changing{' '}
+          <CodeSnippit code="className" displayInline /> or{' '}
+          <CodeSnippit code="required" displayInline /> on an input field; the
+          node itself will remain with its state. For example below, the only
+          thing which changes when we toggle between these components is the{' '}
+          <CodeSnippit code="className" displayInline />, which means the DOM
+          nodes themselves aren't affected and children aren't torn down nor is
+          the root. The <CodeSnippit code="state" displayInline /> is
+          unaffected.
         </Paragraph>
         {!toggleB ? (
           <ParentA count={countB} className="parentA">

@@ -14,4 +14,5 @@ const ItemFragment = (item) => (
 )
 
 // render method ...
-<dl>{items.map((item) => ItemFragment(item))}</dl>`
+<dl>{items.map((item) => ItemFragment(item))}</dl>
+`

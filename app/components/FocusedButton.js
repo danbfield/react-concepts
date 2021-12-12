@@ -5,9 +5,13 @@ export default function FocusedButton() {
   const buttonRef = useRef(null)
 
   useEffect(() => {
-    // As this component is rendered, focus the button. Instead of clicking this button
-    // here, I could just spam my "return" key, and it'd fire the event as well.
-    buttonRef.current.focus()
+    if (window.innerWidth > 768) {
+      // As this component is rendered, focus the button. Instead of clicking this button
+      // here, I could just spam my "return" key, and it'd fire the event as well. We don't
+      // want to focus the button on mobile devices though since it would scroll the users
+      // position further down the page than they would expect.
+      buttonRef.current.focus()
+    }
   }, [])
 
   const handleClick = () => setCount(count + 1)

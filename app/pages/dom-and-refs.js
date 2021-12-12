@@ -1,4 +1,6 @@
 import {
+  CodeBlock,
+  CodeSnippit,
   FocusedButton,
   Heading,
   Main,
@@ -6,6 +8,7 @@ import {
   Section,
   Subheading,
 } from '../components'
+import { ExampleRef } from '../code'
 
 export default function DomAndRefs() {
   return (
@@ -32,6 +35,7 @@ export default function DomAndRefs() {
           rather than manually using our cursor.
         </Paragraph>
         <FocusedButton />
+        <CodeBlock code={ExampleRef} />
         <Paragraph>
           One common theme from what I've noticed is to try and figure out the
           problem first with state, or props, then if all else fails use refs.
@@ -44,14 +48,16 @@ export default function DomAndRefs() {
         <Paragraph>
           React can't pass refs as a prop to functional components, "Function
           components cannot be given refs. Attempts to access this ref will
-          fail". However, we can use React.forwardRef(), which creates a React
-          component and accepts two arguments; props and ref. This is similar to
-          lifting state I suppose, you can have a parent with a ref, and pass it
-          to this child component, which uses forwardRef().
+          fail". However, we can use{' '}
+          <CodeSnippit code="React.forwardRef()" displayInline />, which creates
+          a React component and accepts two arguments; props and ref. This is
+          similar to lifting state I suppose, you can have a parent with a ref,
+          and pass it to this child component, which uses{' '}
+          <CodeSnippit code="forwardRef()" displayInline />.
         </Paragraph>
-        <Paragraph>
-          {`React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>)`}
-        </Paragraph>
+        <CodeSnippit
+          code={`React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>)`}
+        />
       </Section>
     </Main>
   )
