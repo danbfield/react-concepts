@@ -5,6 +5,8 @@ import ExampleFragment from './ExampleFragment'
 import ExampleHOC from './ExampleHOC'
 import ExampleHOCUsage from './ExampleHOCUsage'
 import ExampleImports from './ExampleImports'
+import ExampleMagicPortal from './ExampleMagicPortal'
+import ExamplePortal from './ExamplePortal'
 import ExampleRef from './ExampleRef'
 
 export {
@@ -15,5 +17,7 @@ export {
   ExampleHOC,
   ExampleHOCUsage,
   ExampleImports,
+  ExampleMagicPortal,
+  ExamplePortal,
   ExampleRef,
 }

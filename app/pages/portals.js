@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { ExampleMagicPortal, ExamplePortal } from '../code'
 import {
+  CodeBlock,
   Button,
   Heading,
   Main,
@@ -41,6 +43,10 @@ export default function Portals() {
           in some Context, and then render it using our magic portals in part of
           the DOM where this Context has no business being.
         </Paragraph>
+        <Paragraph>
+          We can create our magic portal by doing the following:
+        </Paragraph>
+        <CodeBlock code={ExamplePortal} />
         <Button changeHandler={() => setSummoned(!summoned)}>
           {summoned ? 'Remove' : 'Summon'} D
         </Button>
@@ -56,6 +62,7 @@ export default function Portals() {
             </Portal>
           )}
         </div>
+        <CodeBlock code={ExampleMagicPortal} />
       </Section>
     </Main>
   )
