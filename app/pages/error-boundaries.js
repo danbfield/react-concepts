@@ -1,4 +1,5 @@
 import {
+  CodeSnippit,
   Heading,
   Link,
   Main,
@@ -22,9 +23,11 @@ export default function ErrorBoundaries() {
           lifecycle methods, and in constructors (for class based components).
         </Paragraph>
         <Paragraph>
-          Components become an error boundary if they have either
-          getDerivedStateFromError() or componentDidCatch(). It's worth noting
-          that error boundaries do not catch errors inside of event handlers.
+          Components become an error boundary if they have either{' '}
+          <CodeSnippit code="getDerivedStateFromError()" displayInline /> or{' '}
+          <CodeSnippit code="componentDidCatch()" displayInline />. It's worth
+          noting that error boundaries do not catch errors inside of event
+          handlers.
         </Paragraph>
       </Section>
     </Main>
