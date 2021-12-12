@@ -44,11 +44,11 @@ export default function Portals() {
         <Button changeHandler={() => setSummoned(!summoned)}>
           {summoned ? 'Remove' : 'Summon'} D
         </Button>
-        <div id='domNodeA'>
+        <div id="domNodeA">
           <Paragraph>A</Paragraph>
           <Paragraph>B</Paragraph>
         </div>
-        <div id='domNodeB'>
+        <div id="domNodeB">
           <Paragraph>C</Paragraph>
           {summoned && node && (
             <Portal domLocation={node}>

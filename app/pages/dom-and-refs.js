@@ -53,7 +53,9 @@ export default function DomAndRefs() {
           lifting state I suppose, you can have a parent with a ref, and pass it
           to this child component, which uses forwardRef().
         </Paragraph>
-        <CodeSnippit code={`React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>)`} />
+        <CodeSnippit
+          code={`React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>)`}
+        />
       </Section>
     </Main>
   )
