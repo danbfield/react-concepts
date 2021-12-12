@@ -16,4 +16,7 @@ function ComponentWithContext() {
 }
 
 // render ...
-<ComponentWithContext />`
+<UserContext.Provider value={user}>
+  <ComponentWithContext />
+</UserContext.Provider>
+`
