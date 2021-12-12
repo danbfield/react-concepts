@@ -11,4 +11,5 @@ const ItemDiv = (item) => (
 )
 
 // render method ...
-<dl>{items.map((item) => ItemDiv(item))}</dl>`
+<dl>{items.map((item) => ItemDiv(item))}</dl>
+`
