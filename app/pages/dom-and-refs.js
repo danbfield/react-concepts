@@ -48,10 +48,12 @@ export default function DomAndRefs() {
         <Paragraph>
           React can't pass refs as a prop to functional components, "Function
           components cannot be given refs. Attempts to access this ref will
-          fail". However, we can use React.forwardRef(), which creates a React
-          component and accepts two arguments; props and ref. This is similar to
-          lifting state I suppose, you can have a parent with a ref, and pass it
-          to this child component, which uses forwardRef().
+          fail". However, we can use{' '}
+          <CodeSnippit code="React.forwardRef()" displayInline />, which creates
+          a React component and accepts two arguments; props and ref. This is
+          similar to lifting state I suppose, you can have a parent with a ref,
+          and pass it to this child component, which uses{' '}
+          <CodeSnippit code="forwardRef()" displayInline />.
         </Paragraph>
         <CodeSnippit
           code={`React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>)`}
