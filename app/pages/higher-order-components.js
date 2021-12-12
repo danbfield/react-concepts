@@ -1,4 +1,13 @@
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
+import { ExampleHOC, ExampleHOCUsage } from '../code'
+import {
+  CodeBlock,
+  CodeSnippit,
+  Heading,
+  Main,
+  Paragraph,
+  Section,
+  Subheading,
+} from '../components'
 import withInteractable from '../helpers/withInteractable'
 
 export default function HigherOrderComponents() {
@@ -18,8 +27,22 @@ export default function HigherOrderComponents() {
           of a higher order component; just a component which has a count state.
         </Paragraph>
         <InteractableParagraph>
-          {`const InteractableParagraph = withInteractable(Paragraph)`}
+          <CodeSnippit
+            code="const InteractableParagraph = withInteractable(Paragraph)"
+            displayInline
+          />
         </InteractableParagraph>
+        <Paragraph>
+          Here we have a component, which doesn't really have much use out of
+          this example. We wrap a component with some{' '}
+          <CodeSnippit code="onClick" displayInline /> functionality, and
+          display a simple counter.
+        </Paragraph>
+        <CodeBlock code={ExampleHOC} />
+        <Paragraph>
+          We can use this higher order component by doing the following:
+        </Paragraph>
+        <CodeBlock code={ExampleHOCUsage} />
       </Section>
     </Main>
   )
