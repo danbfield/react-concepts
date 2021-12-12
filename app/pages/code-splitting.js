@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import {
+  CodeBlock,
+  CodeSnippit,
   BuggedCounter,
   Button,
   Heading,
@@ -9,6 +11,7 @@ import {
   Subheading,
 } from '../components'
 import { double } from '../helpers/Double'
+import { ExampleImports } from '../code'
 import Boundary from '../helpers/Boundary'
 
 export default function CodeSplitting() {
@@ -64,6 +67,7 @@ export default function CodeSplitting() {
         <Button changeHandler={handleDyanmicAdd}>
           Double Dyanamic: {dynamicValue}
         </Button>
+        <CodeBlock code={ExampleImports} />
       </Section>
       <Section>
         <Subheading>Lazy Imports</Subheading>
