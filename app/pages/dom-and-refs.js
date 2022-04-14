@@ -7,7 +7,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 import { ExampleRef } from '../code'
 
 export default function DomAndRefs() {

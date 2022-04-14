@@ -6,7 +6,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 
 export default function Profiler() {
   const [count, setCount] = useState(0)

@@ -7,7 +7,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 import UserContext from '../helpers/UserContext'
 import { ExampleContext } from '../code'
 

@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css'
-import { NavigationMenu } from '../components'
+import { NavigationMenu } from 'components'
 import { AnimatePresence } from 'framer-motion'
 
 const items = [

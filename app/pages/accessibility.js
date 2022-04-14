@@ -8,7 +8,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 import { ExampleDiv, ExampleFragment } from '../code'
 
 export default function Accessibility() {

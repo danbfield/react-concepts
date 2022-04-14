@@ -5,7 +5,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 
 export default function TypeChecking() {
   return (

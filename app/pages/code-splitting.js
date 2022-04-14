@@ -9,7 +9,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 import { double } from '../helpers/Double'
 import { ExampleBoundary, ExampleImports } from '../code'
 import Boundary from '../helpers/Boundary'

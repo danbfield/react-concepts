@@ -1,5 +1,5 @@
 export default `import withInteractable from '../helpers/withInteractable'
-import { Paragraph } from '../components'
+import { Paragraph } from 'components'
 
 const InteractableParagraph = withInteractable(Paragraph)
 

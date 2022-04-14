@@ -8,7 +8,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 import Portal from '../helpers/Portal'
 
 export default function Portals() {

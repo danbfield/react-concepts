@@ -6,7 +6,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 
 function Form() {
   const ref = useRef(null)
