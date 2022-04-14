@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { MenuDesktop, MenuMobile } from '../components'
+import { MenuDesktop, MenuMobile } from 'components'
 
 export default function NavigationMenu({ items }) {
   const [belowMediumBreakpoint, setBelowMediumBreakpoint] = useState(false)

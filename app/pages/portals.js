@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ExampleMagicPortal, ExamplePortal } from '../code'
+import { ExampleMagicPortal, ExamplePortal } from 'code'
 import {
   CodeBlock,
   Button,
@@ -8,7 +8,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 import Portal from '../helpers/Portal'
 
 export default function Portals() {

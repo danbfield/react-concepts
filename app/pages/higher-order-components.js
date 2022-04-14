@@ -1,4 +1,4 @@
-import { ExampleHOC, ExampleHOCUsage } from '../code'
+import { ExampleHOC, ExampleHOCUsage } from 'code'
 import {
   CodeBlock,
   CodeSnippit,
@@ -7,7 +7,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 import withInteractable from '../helpers/withInteractable'
 
 export default function HigherOrderComponents() {

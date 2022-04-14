@@ -8,8 +8,8 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
-import { ExampleDiv, ExampleFragment } from '../code'
+} from 'components'
+import { ExampleDiv, ExampleFragment } from 'code'
 
 export default function Accessibility() {
   const [value, setValue] = useState('')

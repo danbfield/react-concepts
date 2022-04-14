@@ -1,4 +1,4 @@
-import { Heading, Main, Paragraph, Section, Subheading } from '../components'
+import { Heading, Main, Paragraph, Section, Subheading } from 'components'
 
 export default function StrictMode() {
   return (

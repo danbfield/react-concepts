@@ -8,7 +8,7 @@ import {
   Paragraph,
   Section,
   Subheading,
-} from '../components'
+} from 'components'
 
 function ParentA({ count, children }) {
   return (
