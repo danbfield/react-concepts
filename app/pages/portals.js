@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ExampleMagicPortal, ExamplePortal } from '../code'
+import { ExampleMagicPortal, ExamplePortal } from 'code'
 import {
   CodeBlock,
   Button,

@@ -9,7 +9,7 @@ import {
   Subheading,
 } from 'components'
 import UserContext from '../helpers/UserContext'
-import { ExampleContext } from '../code'
+import { ExampleContext } from 'code'
 
 function ComponentWithContext() {
   const user = useContext(UserContext)

@@ -1,4 +1,4 @@
-import { ExampleHOC, ExampleHOCUsage } from '../code'
+import { ExampleHOC, ExampleHOCUsage } from 'code'
 import {
   CodeBlock,
   CodeSnippit,

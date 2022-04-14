@@ -8,7 +8,7 @@ import {
   Section,
   Subheading,
 } from 'components'
-import { ExampleRef } from '../code'
+import { ExampleRef } from 'code'
 
 export default function DomAndRefs() {
   return (

@@ -9,7 +9,7 @@ import {
   Section,
   Subheading,
 } from 'components'
-import { ExampleDiv, ExampleFragment } from '../code'
+import { ExampleDiv, ExampleFragment } from 'code'
 
 export default function Accessibility() {
   const [value, setValue] = useState('')
