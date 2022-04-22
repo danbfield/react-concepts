@@ -9,6 +9,7 @@ import Link from './Link'
 import Main from './Main'
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
+import NavigationLink from './NavigationLink'
 import NavigationMenu from './NavigationMenu'
 import Paragraph from './Paragraph'
 import Section from './Section'
@@ -26,6 +27,7 @@ export {
   Main,
   MenuDesktop,
   MenuMobile,
+  NavigationLink,
   NavigationMenu,
   Paragraph,
   Section,
