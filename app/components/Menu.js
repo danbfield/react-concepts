@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { NavigationLink } from 'components'
 
 export default function Menu({ items, handleClick }) {
@@ -12,4 +13,13 @@ export default function Menu({ items, handleClick }) {
       </ul>
   </nav>
   )
+}
+
+Menu.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleClick: PropTypes.func,
+}
+
+Menu.defaultProps = {
+  handleClick: null,
 }
