@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { convertArrayIntoString } from '../helpers/ArrayHelpers'
+import { Menu } from 'components'
 
 const mainMenuStyle = [
   '-translate-x-full',
@@ -27,19 +28,7 @@ export default function MenuDesktop({ items }) {
           <span className="text-2xl font-bold">React Concepts</span>
         </a>
       </Link>
-      <nav>
-        <ul>
-          {items.map((item, index) => (
-            <li key={index}>
-              <Link href={item.url}>
-                <a className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
-                  {item.text}
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <Menu items={items} />
     </div>
   )
 }
