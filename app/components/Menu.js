@@ -6,7 +6,7 @@ export default function Menu({ items, handleClick }) {
     <nav>
       <ul>
         {items.map((item, index) => (
-          <li key={index}>
+          <li key={index} data-testid={item.text}>
             <NavigationLink item={item} handleClick={handleClick} />
           </li>
         ))}
