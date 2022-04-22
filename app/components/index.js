@@ -7,6 +7,7 @@ import Heading from './Heading'
 import Input from './Input'
 import Link from './Link'
 import Main from './Main'
+import Menu from './Menu'
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 import NavigationLink from './NavigationLink'
@@ -25,6 +26,7 @@ export {
   Input,
   Link,
   Main,
+  Menu,
   MenuDesktop,
   MenuMobile,
   NavigationLink,
