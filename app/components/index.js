@@ -7,8 +7,10 @@ import Heading from './Heading'
 import Input from './Input'
 import Link from './Link'
 import Main from './Main'
+import Menu from './Menu'
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
+import NavigationLink from './NavigationLink'
 import NavigationMenu from './NavigationMenu'
 import Paragraph from './Paragraph'
 import Section from './Section'
@@ -24,8 +26,10 @@ export {
   Input,
   Link,
   Main,
+  Menu,
   MenuDesktop,
   MenuMobile,
+  NavigationLink,
   NavigationMenu,
   Paragraph,
   Section,
