@@ -12,7 +12,7 @@
     "code": "file:code",
     "components": "file:components",
     "framer-motion": "^5.4.3",
-    "next": "13.0.3",
+    "next": "11.1.3",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-code-blocks": "*",
